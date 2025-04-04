@@ -1,0 +1,46 @@
+{
+  "id": "1.20.1-OptiFine_HD_U_I6",
+  "type": "release",
+  "inheritsFrom": "1.20.1",
+  "mainClass": "net.optifine.launcher.OptiFineLauncher",
+  "releaseTime": "2023-06-07T00:00:00+00:00",
+  "time": "2023-06-07T00:00:00+00:00",
+  "arguments": {
+    "game": [
+      "--username", "${auth_player_name}",
+      "--version", "${version_name}",
+      "--gameDir", "${game_directory}",
+      "--assetsDir", "${assets_root}",
+      "--assetIndex", "${assets_index_name}",
+      "--uuid", "${auth_uuid}",
+      "--accessToken", "${auth_access_token}",
+      "--userType", "${user_type}",
+      "--versionType", "${version_type}"
+    ],
+    "jvm": [
+      "-Xmx4G",
+      "-Xms2G",
+      "-Djava.library.path=${natives_directory}",
+      "-Dminecraft.launcher.brand=minecraft-launcher-core",
+      "-Dminecraft.launcher.version=3.18.2",
+      "-cp", "${classpath}"
+    ]
+  },
+  "libraries": [
+    {
+      "name": "optifine:OptiFine:1.20.1_HD_U_I6",
+      "downloads": {
+        "artifact": {
+          "path": "optifine/OptiFine/1.20.1_HD_U_I6/OptiFine-1.20.1_HD_U_I6.jar",
+          "url": "https://optifine.net/downloadx?f=OptiFine_1.20.1_HD_U_I6.jar"
+        }
+      }
+    },
+    {
+      "name": "net.minecraft:launchwrapper:1.12"
+    },
+    {
+      "name": "org.ow2.asm:asm-all:5.2"
+    }
+  ]
+}
